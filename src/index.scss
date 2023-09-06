@@ -251,6 +251,20 @@ header {
   @include flex($direct: column, $gap: 10px);
 }
 
+/* Error page */
+.error__wrapper{
+  height: 80vh;
+  @include flex($justify: start, $direct: column, $gap: 40px);
+  padding: 100px calc(5vw + 20px) 0;
+  img{
+    width: 100px;
+    height: 100px;
+  }
+}
+.error-link{
+  color: #580055;
+}
+
 /* Footer */
 footer {
   background: #343a40;
@@ -299,49 +313,6 @@ footer {
   object-fit:cover;
 }
 
-.prev,
-.next {
-  position: absolute;
-  top: 200px;
-  background: var(--grey-500);
-  color: var(--white);
-  width: 1.25rem;
-  height: 1.25rem;
-  display: grid;
-  place-items: center;
-  border-color: transparent;
-  border-radius: var(--borderRadius);
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.prev:hover,
-.next:hover {
-  background: var(--primary-500);
-}
-
-.prev {
-  left: 0;
-}
-.next {
-  right: 0;
-}
-
-@media screen and (min-width: 800px) {
-  .text {
-    max-width: 45em;
-  }
-  .prev,
-  .next {
-    width: 2rem;
-    height: 2rem;
-    font-size: 1.5rem;
-  }
-}
-
-.next-slide{
-  transform: translateX(100%);
-}
 
 /* Responsive */
 @media (max-width: 991px) {

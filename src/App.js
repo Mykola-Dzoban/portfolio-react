@@ -10,6 +10,7 @@ import Technologies from "./components/Technologies";
 import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
 import Project from "./components/Project";
+import ErrorPage from "./components/ErrorPage";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
                   <Main />
                 </Provider>
               }
+              default
             />
             <Route
               path="/portfolio-react/projects"
@@ -65,6 +67,14 @@ function App() {
               element={
                 <Provider store={store}>
                   <Project />
+                </Provider>
+              }
+            />
+            <Route
+              path="*"
+              element={
+                <Provider store={store}>
+                  <ErrorPage />
                 </Provider>
               }
             />
