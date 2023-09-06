@@ -22,7 +22,7 @@ function App() {
         <div className="container">
           <Routes>
             <Route
-              path="/portfolio-react/"
+              path="/"
               element={
                 <Provider store={store}>
                   <Main />
@@ -31,7 +31,7 @@ function App() {
               default
             />
             <Route
-              path="/portfolio-react/projects"
+              path="/projects"
               element={
                 <Provider store={store}>
                   <Projects />
@@ -39,7 +39,7 @@ function App() {
               }
             />
             <Route
-              path="/portfolio-react/experience"
+              path="/experience"
               element={
                 <Provider store={store}>
                   <WorkExperience />
@@ -47,7 +47,7 @@ function App() {
               }
             />
             <Route
-              path="/portfolio-react/technologies"
+              path="/technologies"
               element={
                 <Provider store={store}>
                   <Technologies />
@@ -55,7 +55,7 @@ function App() {
               }
             />
             <Route
-              path="/portfolio-react/contacts"
+              path="/contacts"
               element={
                 <Provider store={store}>
                   <Contacts />
@@ -63,7 +63,7 @@ function App() {
               }
             />
             <Route
-              path="/portfolio-react/projects/:projectTitle"
+              path="/projects/:projectTitle"
               element={
                 <Provider store={store}>
                   <Project />

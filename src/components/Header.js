@@ -46,31 +46,31 @@ const Header = () => {
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/portfolio-react/">
+                    to="/">
                     Home
                   </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/portfolio-react/projects">
+                    to="/projects">
                     Projects
                   </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/portfolio-react/experience">
+                    to="/experience">
                     Work experience
                   </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/portfolio-react/technologies">
+                    to="/technologies">
                     Technologies
                   </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/portfolio-react/contacts">
+                    to="/contacts">
                     Contacts
                   </Link>
                 </>
@@ -79,31 +79,31 @@ const Header = () => {
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/portfolio-react/">
+                    to="/">
                     Головна
                   </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/portfolio-react/projects">
+                    to="/projects">
                     Проєкти
                   </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/portfolio-react/experience">
+                    to="/experience">
                     Досвід роботи
                   </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/portfolio-react/technologies">
+                    to="/technologies">
                     Технології
                   </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/portfolio-react/contacts">
+                    to="/contacts">
                     Контакти
                   </Link>
                 </>
