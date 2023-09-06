@@ -14,7 +14,7 @@ import ErrorPage from "./components/ErrorPage";
 
 function App() {
   return (
-    <BrowserRouter>
+    
       <main className="wrapper">
         <Provider store={store}>
           <Header />
@@ -84,7 +84,7 @@ function App() {
           <Footer />
         </Provider>
       </main>
-    </BrowserRouter>
+
   );
 }
 
