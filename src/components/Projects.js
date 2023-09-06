@@ -18,7 +18,7 @@ const Projects = () => {
               <p className="description">{description.substring(0, 200)}...</p>
               <Link
                 className="details"
-                to={`/portfolio-react/projects/${title.toLowerCase()}`}>
+                to={`/projects/${title.toLowerCase()}`}>
                 More details...
               </Link>
             </div>
@@ -39,7 +39,7 @@ const Projects = () => {
               <p className="description">{description.substring(0, 200)}...</p>
               <Link
                 className="details"
-                to={`/portfolio-react/projects/${title.toLowerCase()}`}>
+                to={`/projects/${title.toLowerCase()}`}>
                 More details...
               </Link>
             </div>
