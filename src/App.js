@@ -21,7 +21,7 @@ function App() {
         <div className="container">
           <Routes>
             <Route
-              path=""
+              path="/portfolio-react/"
               element={
                 <Provider store={store}>
                   <Main />
@@ -29,7 +29,7 @@ function App() {
               }
             />
             <Route
-              path="/projects"
+              path="/portfolio-react/projects"
               element={
                 <Provider store={store}>
                   <Projects />
@@ -37,7 +37,7 @@ function App() {
               }
             />
             <Route
-              path="/experience"
+              path="/portfolio-react/experience"
               element={
                 <Provider store={store}>
                   <WorkExperience />
@@ -45,7 +45,7 @@ function App() {
               }
             />
             <Route
-              path="/technologies"
+              path="/portfolio-react/technologies"
               element={
                 <Provider store={store}>
                   <Technologies />
@@ -53,14 +53,21 @@ function App() {
               }
             />
             <Route
-              path="/contacts"
+              path="/portfolio-react/contacts"
               element={
                 <Provider store={store}>
                   <Contacts />
                 </Provider>
               }
             />
-            <Route path="/projects/:projectTitle" element={<Provider store={store}><Project/></Provider>} />
+            <Route
+              path="/portfolio-react/projects/:projectTitle"
+              element={
+                <Provider store={store}>
+                  <Project />
+                </Provider>
+              }
+            />
           </Routes>
         </div>
         <Provider store={store}>

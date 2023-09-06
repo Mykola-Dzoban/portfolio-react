@@ -16,7 +16,9 @@ const Projects = () => {
             <div key={id} className="project-text project-text2">
               <h3>{title}</h3>
               <p className="description">{description.substring(0, 200)}...</p>
-              <Link className="details" to={`/projects/${title.toLowerCase()}`}>
+              <Link
+                className="details"
+                to={`/portfolio-react/projects/${title.toLowerCase()}`}>
                 More details...
               </Link>
             </div>
@@ -35,7 +37,9 @@ const Projects = () => {
             <div key={id} className="project-text project-text2">
               <h3>{title}</h3>
               <p className="description">{description.substring(0, 200)}...</p>
-              <Link className="details" to={`/projects/${title.toLowerCase()}`}>
+              <Link
+                className="details"
+                to={`/portfolio-react/projects/${title.toLowerCase()}`}>
                 More details...
               </Link>
             </div>

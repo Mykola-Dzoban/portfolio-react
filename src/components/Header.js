@@ -43,61 +43,67 @@ const Header = () => {
             <ul className={isNavOpen ? "nav-menu active" : "nav-menu"}>
               {gbBtn ? (
                 <>
-                  <Link className="nav-item nav-link" onClick={closeNav} to="/">
+                  <Link
+                    className="nav-item nav-link"
+                    onClick={closeNav}
+                    to="/portfolio-react/">
                     Home
                   </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/projects">
+                    to="/portfolio-react/projects">
                     Projects
                   </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/experience">
+                    to="/portfolio-react/experience">
                     Work experience
                   </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/technologies">
+                    to="/portfolio-react/technologies">
                     Technologies
                   </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/contacts">
+                    to="/portfolio-react/contacts">
                     Contacts
                   </Link>
                 </>
               ) : (
                 <>
-                  <Link className="nav-item nav-link" onClick={closeNav} to="/">
+                  <Link
+                    className="nav-item nav-link"
+                    onClick={closeNav}
+                    to="/portfolio-react/">
                     Головна
                   </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/projects">
+                    to="/portfolio-react/projects">
                     Проєкти
                   </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/experience">
+                    to="/portfolio-react/experience">
                     Досвід роботи
                   </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/technologies">
+                    to="/portfolio-react/technologies">
                     Технології
                   </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/contacts">
+                    to="/portfolio-react/contacts">
                     Контакти
                   </Link>
                 </>
