@@ -22,7 +22,7 @@ function App() {
         <div className="container">
           <Routes>
             <Route
-              path="/"
+              path="/*"
               element={
                 <Provider store={store}>
                   <Main />
