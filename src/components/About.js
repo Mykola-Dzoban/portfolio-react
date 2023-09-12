@@ -45,7 +45,6 @@ const About = () => {
   }
 
   const newDate = new Date(user.created_at);
-  const lastGithubUpdate = new Date(user.updated_at);
 
   return (
     <section className="about">
@@ -92,7 +91,7 @@ const About = () => {
               <strong>Created:</strong> {newDate.toDateString()}
             </p>
             <p className="github-update">
-              <strong>Last update:</strong> {lastGithubUpdate.toUTCString()}
+              <strong>Public repositories:</strong> {user.public_repos}
             </p>
             <hr />
             <a target="_blank" rel="noreferrer" href={user.html_url}>
@@ -105,4 +104,4 @@ const About = () => {
   );
 };
 
-export default React.memo(About);
+export default About;
