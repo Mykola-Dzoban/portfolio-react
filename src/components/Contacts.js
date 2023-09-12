@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import { gbSelector } from "../store/selector";
 import { contacts } from "../data";
@@ -12,13 +11,12 @@ const Contacts = () => {
         <div className="contacts_socials">
           {contacts.map((item) => {
             return (
-              <a
-                key={item.id}
-                target="_blank"
-                rel="noreferrer"
-                href={item.link}>
-                <img src={item.icon} alt="contact" />
-              </a>
+              <div key={item.id} className="contact-item-wrap">
+                <a target="_blank" rel="noreferrer" href={item.link}>
+                  <img src={item.icon} alt="contact" />
+                </a>
+                <span className="contact-name">{item.name}</span>
+              </div>
             );
           })}
         </div>

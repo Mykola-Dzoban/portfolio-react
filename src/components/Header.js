@@ -43,11 +43,14 @@ const Header = () => {
             <ul className={isNavOpen ? "nav-menu active" : "nav-menu"}>
               {gbBtn ? (
                 <>
+                  <Link className="nav-item nav-link" onClick={closeNav} to="/">
+                    Home
+                  </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/">
-                    Home
+                    to="/about">
+                    About
                   </Link>
                   <Link
                     className="nav-item nav-link"
@@ -76,11 +79,14 @@ const Header = () => {
                 </>
               ) : (
                 <>
+                  <Link className="nav-item nav-link" onClick={closeNav} to="/">
+                    Головна
+                  </Link>
                   <Link
                     className="nav-item nav-link"
                     onClick={closeNav}
-                    to="/">
-                    Головна
+                    to="/about">
+                    Про мене
                   </Link>
                   <Link
                     className="nav-item nav-link"

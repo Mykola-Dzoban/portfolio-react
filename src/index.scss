@@ -60,7 +60,9 @@ h2 {
 h3 {
   @include font(25px, 600, #000);
 }
-
+hr {
+  width: 100%;
+}
 /* Hamburger */
 .hamburger {
   display: none;
@@ -99,6 +101,7 @@ header {
   }
 }
 .languages {
+  cursor: pointer;
   @include flex($justify: center, $gap: calc(1vw));
 }
 
@@ -133,17 +136,44 @@ header {
 /* About */
 .about__wrapper {
   text-align: center;
-  @include flex($direct: column, $gap: 40px);
-  padding: 0 calc(5vw + 20px);
+  @include flex($justify: start, $direct: column, $gap: 40px);
+  min-height: 90vh;
+  padding: 100px calc(5vw + 20px) 0;
   p {
-    @include font(22px, 400, #000);
+    @include font(18px, 400, #000);
+  }
+}
+.about__github-user {
+  @include flex($direct: column, $justify: space-between, $gap: 10px);
+  img {
+    border-radius: 50%;
+  }
+  padding: 20px;
+  background: #ffffff;
+  border: 1px dashed #000;
+  border-radius: 10px;
+}
+.user-data {
+  @include flex($direct: column, $justify: space-between, $gap: 5px);
+  .github-name,
+  .github-location,
+  .github-date,
+  .github-update {
+    @include font($size: 16px, $weight: 400, $color: #000000);
+  }
+  .github-name {
+    font-size: 18px;
+  }
+  a {
+    @include font($size: 20px, $weight: 500, $color: #4fbfdb);
+    text-decoration: underline;
   }
 }
 
 /* Technologies */
 .tech__wrapper {
   @include flex($justify: start, $direct: column, $gap: 40px);
-  height: 90vh;
+  min-height: 90vh;
   padding: 100px calc(5vw + 20px) 0;
 }
 .technologies {
@@ -152,6 +182,27 @@ header {
     width: 100px;
     height: 100px;
   }
+}
+.tech-wrap {
+  max-width: 150px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: all 0.5s;
+}
+.tech-item-name {
+  font-size: calc(10px + 0.5vw);
+  font-weight: 600;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s;
+}
+.tech-wrap:hover .tech-item-name {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Projects */
@@ -176,13 +227,13 @@ header {
   padding: 20px 35px;
 }
 .project-text2 {
-  @include flex($align:start,$direct: column, $gap: 24px);
+  @include flex($align: start, $direct: column, $gap: 24px);
   border-radius: 5px 5px 0px 0px;
-  border: 1px solid #CED4DA;
-  background: #F8F8F9;
+  border: 1px solid #ced4da;
+  background: #f8f8f9;
   width: 100%;
   padding: 20px 35px;
-  p{
+  p {
     text-align: left;
   }
 }
@@ -211,7 +262,7 @@ header {
 
 /* Contacts */
 .contacts__wrapper {
-  height: 90vh;
+  min-height: 90vh;
   @include flex($justify: start, $direct: column, $gap: 40px);
   padding: 100px calc(5vw + 20px) 0;
   .bmc {
@@ -225,43 +276,64 @@ header {
     height: 100px;
   }
 }
+.contact-item-wrap {
+  max-width: 150px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: all 0.5s;
+}
+.contact-name {
+  font-size: calc(10px + 0.5vw);
+  font-weight: 600;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s;
+}
+.contact-item-wrap:hover .contact-name {
+  visibility: visible;
+  opacity: 1;
+}
 
 /* Work experience */
 .work__wrapper {
-  height: 90vh;
+  min-height: 90vh;
   @include flex($justify: start, $direct: column, $gap: 40px);
   padding: 100px calc(5vw + 20px) 0;
 }
 .work {
   padding: calc(2vw + 10px) calc(3vw + 20px);
   border-radius: 22px;
-  background: #f6f6f6;
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.35) inset;
+  background: #ffffff;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.226);
   @include flex($direct: column, $gap: 10px);
   text-align: center;
-  h3{
+  h3 {
     font-weight: 700;
   }
-  p{
+  p {
     font-size: 20px;
     font-weight: 600;
   }
 }
-.position{
+.position {
   @include flex($direct: column, $gap: 10px);
 }
 
 /* Error page */
-.error__wrapper{
+.error__wrapper {
   height: 80vh;
   @include flex($justify: start, $direct: column, $gap: 40px);
   padding: 100px calc(5vw + 20px) 0;
-  img{
+  img {
     width: 100px;
     height: 100px;
   }
 }
-.error-link{
+.error-link {
   color: #580055;
 }
 
@@ -304,18 +376,20 @@ footer {
 }
 
 .slide-img {
-  width: calc(300px + 10vw);
-  height: calc(300px + 10vw);
+  width: calc(500px + 10vw);
+  height: calc(500px + 10vw);
+  border-radius: 5px;
   margin-bottom: 1rem;
   object-fit: cover;
   border: 4px solid var(--primary-200);
   box-shadow: var(--shadow-3);
-  object-fit:cover;
+  object-fit: cover;
+  border: 2px solid black;
 }
 
-
 /* Responsive */
-@media (max-width: 991px) {
+
+@media (max-width: 1160px) {
   .hamburger {
     display: block;
   }
@@ -345,10 +419,20 @@ footer {
   .nav-menu.active {
     left: 0;
   }
-  body.noscroll {
-    overflow: hidden;
+  /* Technologies */
+  .tech-item-name {
+    font-size: calc(17px + 0.5vw);
+    visibility: visible;
+    opacity: 1;
   }
-
+  /* Contacts */
+  .contact-name {
+    font-size: calc(17px + 0.5vw);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@media (max-width: 991px) {
   h2 {
     @include font(34px, 600, #000);
     text-align: center;
@@ -386,9 +470,10 @@ footer {
   /* About */
   .about__wrapper {
     p {
-      @include font(20px, 400, #000);
+      @include font(17px, 400, #000);
     }
   }
+
   /* Projects */
   .project-text {
     text-align: center;
@@ -413,7 +498,7 @@ footer {
   }
   /* Contacts */
   .contacts__wrapper {
-    @include flex($direct: column, $gap: 30px);
+    @include flex($direct: column, $gap: 30px, $justify: start);
   }
   .contacts_socials {
     @include flex($direct: row, $gap: 30px, $wrap: wrap);
@@ -422,11 +507,17 @@ footer {
       height: 70px;
     }
   }
+
   /* Footer */
   .footer__wrapper {
     padding: 23px 0;
     p {
       @include font(14px, 400, #fff);
     }
+  }
+  /* Slider */
+  .slide-img {
+    width: 90vw;
+    height: 90vw;
   }
 }

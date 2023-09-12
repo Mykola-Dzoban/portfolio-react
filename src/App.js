@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
 
@@ -11,6 +11,7 @@ import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
 import Project from "./components/Project";
 import ErrorPage from "./components/ErrorPage";
+import About from "./components/About";
 
 function App() {
   return (
@@ -29,6 +30,14 @@ function App() {
                 </Provider>
               }
               default
+            />
+            <Route
+              path="/about"
+              element={
+                <Provider store={store}>
+                  <About />
+                </Provider>
+              }
             />
             <Route
               path="/projects"

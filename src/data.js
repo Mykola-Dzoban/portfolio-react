@@ -1,8 +1,13 @@
 import css from "./img/css.svg";
+import sass from "./img/sass.svg";
+import bootstrap from "./img/bootstrap.svg";
+import styled from "./img/styled.svg";
 import git from "./img/git.svg";
 import github from "./img/github.svg";
 import html from "./img/html.svg";
 import javascript from "./img/javascript.svg";
+import typescript from "./img/typescript.svg";
+import node from "./img/node.svg";
 import npm from "./img/npm.svg";
 import linkedin from "./img/linkedin.svg";
 import react from "./img/react.svg";
@@ -213,27 +218,44 @@ export const projectsUA = [
   },
 ];
 /* ============== Technologies ============== */
-export const technologies = [html, css, javascript, react, redux, npm, git];
+export const technologies = [
+  { techUrl: html, techName: "HTML" },
+  { techUrl: css, techName: "CSS" },
+  { techUrl: sass, techName: "SASS" },
+  { techUrl: bootstrap, techName: "BOOTSTRAP" },
+  { techUrl: styled, techName: "STYLED COMPONENTS" },
+  { techUrl: javascript, techName: "JAVASCRIPT" },
+  { techUrl: typescript, techName: "TYPESCRIPT" },
+  { techUrl: react, techName: "REACT" },
+  { techUrl: redux, techName: "REDUX" },
+  { techUrl: node, techName: "NODE.JS" },
+  { techUrl: npm, techName: "NPM" },
+  { techUrl: git, techName: "GIT" },
+];
 /* ============== Contacts ============== */
 export const contacts = [
   {
     id: 1,
     icon: github,
+    name:'GitHub',
     link: "https://github.com/Mykola-Dzoban",
   },
   {
     id: 2,
     icon: telegram,
+    name:'Telegram',
     link: "https://t.me/nikalaaay",
   },
   {
     id: 3,
     icon: twitter,
+    name:'Twitter',
     link: "https://twitter.com/gushidomo",
   },
   {
     id: 4,
     icon: linkedin,
+    name:'LinkedIn',
     link: "https://www.linkedin.com/in/mykola-dzoban-9007a0261/",
   },
 ];
