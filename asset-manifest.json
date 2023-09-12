@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-react/static/css/main.45a50727.css",
-    "main.js": "/portfolio-react/static/js/main.df134f8c.js",
+    "main.css": "/portfolio-react/static/css/main.297a8551.css",
+    "main.js": "/portfolio-react/static/js/main.e287106a.js",
     "static/media/backroads1.png": "/portfolio-react/static/media/backroads1.2f959350edd0a89262fa.png",
     "static/media/twit1.png": "/portfolio-react/static/media/twit1.36ea35d0ee89bfb492a7.png",
     "static/media/twit2.png": "/portfolio-react/static/media/twit2.68e256f33c1d89feb248.png",
@@ -20,10 +20,14 @@
     "static/media/timer3.png": "/portfolio-react/static/media/timer3.e91b63a01da46d3d677d.png",
     "static/media/timer1.png": "/portfolio-react/static/media/timer1.23a455f82f6f62a92410.png",
     "static/media/sign1.png": "/portfolio-react/static/media/sign1.20937fabf5bd78d10e88.png",
+    "static/media/node.svg": "/portfolio-react/static/media/node.4d8b9a0c5a604b6b68d3750273f913d6.svg",
     "static/media/av200b.png": "/portfolio-react/static/media/av200b.c96b188e7397b0068e61.png",
+    "static/media/styled.svg": "/portfolio-react/static/media/styled.22d2d36c31a05bb432684c8dcfe248fb.svg",
     "static/media/react.svg": "/portfolio-react/static/media/react.f57b349b4d9df56c9b48c916a8d5adfb.svg",
+    "static/media/sass.svg": "/portfolio-react/static/media/sass.eebb8c7d36e22f3f6eea5e6edfa027a3.svg",
     "static/media/github.svg": "/portfolio-react/static/media/github.5531be85d7a8d6f333e5c7136944a022.svg",
     "static/media/redux.svg": "/portfolio-react/static/media/redux.59f428ebf1c8b3a3fcec9ee28b57c9da.svg",
+    "static/media/bootstrap.svg": "/portfolio-react/static/media/bootstrap.9d075438ba542ffbbd7cb891d8b84c8f.svg",
     "static/media/website.svg": "/portfolio-react/static/media/website.e551307a89ae33e25c5dfba6f514fd0b.svg",
     "static/media/gb.svg": "/portfolio-react/static/media/gb.0a6e8e3faa8538889d1f3ddccdf8615d.svg",
     "static/media/broken.svg": "/portfolio-react/static/media/broken.160b461d1021ee6dec9a900d4845c4a0.svg",
@@ -32,17 +36,18 @@
     "static/media/git.svg": "/portfolio-react/static/media/git.8ee81345da1c18b6cdb4bbe93b464810.svg",
     "static/media/twitter.svg": "/portfolio-react/static/media/twitter.015d0ba4302c64429742722e2353f140.svg",
     "static/media/linkedin.svg": "/portfolio-react/static/media/linkedin.98992a3d0f228c7870786550dba2b75a.svg",
+    "static/media/typescript.svg": "/portfolio-react/static/media/typescript.250981d1e26a632d08ab7cf18b210da3.svg",
     "static/media/javascript.svg": "/portfolio-react/static/media/javascript.87a6904ffa190a37c824d0b73ff669c4.svg",
     "index.html": "/portfolio-react/index.html",
     "static/media/ua.svg": "/portfolio-react/static/media/ua.358e719e2e44eaa7f08c42722780da43.svg",
     "static/media/npm.svg": "/portfolio-react/static/media/npm.e95e6392f67f73c87a03d0eda8d384c7.svg",
     "static/media/css.svg": "/portfolio-react/static/media/css.315b8fdb9dbf75ae965b80bf368895cd.svg",
     "static/media/html.svg": "/portfolio-react/static/media/html.0107c93943a8f415b5db64ebb0a9d12d.svg",
-    "main.45a50727.css.map": "/portfolio-react/static/css/main.45a50727.css.map",
-    "main.df134f8c.js.map": "/portfolio-react/static/js/main.df134f8c.js.map"
+    "main.297a8551.css.map": "/portfolio-react/static/css/main.297a8551.css.map",
+    "main.e287106a.js.map": "/portfolio-react/static/js/main.e287106a.js.map"
   },
   "entrypoints": [
-    "static/css/main.45a50727.css",
-    "static/js/main.df134f8c.js"
+    "static/css/main.297a8551.css",
+    "static/js/main.e287106a.js"
   ]
 }
