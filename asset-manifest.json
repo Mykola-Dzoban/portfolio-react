@@ -1,11 +1,14 @@
 {
   "files": {
     "main.css": "/portfolio-react/static/css/main.ef4896fe.css",
-    "main.js": "/portfolio-react/static/js/main.5497510a.js",
+    "main.js": "/portfolio-react/static/js/main.a8b68288.js",
     "static/media/backroads1.png": "/portfolio-react/static/media/backroads1.2f959350edd0a89262fa.png",
     "static/media/twit1.png": "/portfolio-react/static/media/twit1.36ea35d0ee89bfb492a7.png",
+    "static/media/unsplash2.png": "/portfolio-react/static/media/unsplash2.4f3724454779d1f3f95f.png",
+    "static/media/unsplash1.png": "/portfolio-react/static/media/unsplash1.2e4c838241090f2744ae.png",
     "static/media/twit2.png": "/portfolio-react/static/media/twit2.68e256f33c1d89feb248.png",
     "static/media/backroads3.png": "/portfolio-react/static/media/backroads3.8519c4b5c7d5711c04a1.png",
+    "static/media/unsplash3.png": "/portfolio-react/static/media/unsplash3.d3115de03295f9944f6b.png",
     "static/media/backroads2.png": "/portfolio-react/static/media/backroads2.b91f3e4a4a36b7fd8a46.png",
     "static/media/virtual1.png": "/portfolio-react/static/media/virtual1.c76c58337692c66b2d7e.png",
     "static/media/virtual3.png": "/portfolio-react/static/media/virtual3.a8dc226368248443fb17.png",
@@ -44,10 +47,10 @@
     "static/media/css.svg": "/portfolio-react/static/media/css.315b8fdb9dbf75ae965b80bf368895cd.svg",
     "static/media/html.svg": "/portfolio-react/static/media/html.0107c93943a8f415b5db64ebb0a9d12d.svg",
     "main.ef4896fe.css.map": "/portfolio-react/static/css/main.ef4896fe.css.map",
-    "main.5497510a.js.map": "/portfolio-react/static/js/main.5497510a.js.map"
+    "main.a8b68288.js.map": "/portfolio-react/static/js/main.a8b68288.js.map"
   },
   "entrypoints": [
     "static/css/main.ef4896fe.css",
-    "static/js/main.5497510a.js"
+    "static/js/main.a8b68288.js"
   ]
 }
