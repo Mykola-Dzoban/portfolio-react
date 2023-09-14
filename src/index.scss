@@ -147,6 +147,8 @@ header {
   @include flex($direct: column, $justify: space-between, $gap: 10px);
   img {
     border-radius: 50%;
+    width: calc(200px + 2vw);
+    height: calc(200px + 2vw);
   }
   padding: 20px;
   background: #ffffff;
