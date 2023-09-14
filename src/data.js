@@ -34,6 +34,9 @@ import twit3 from "./img/projectsImg/twit3.png";
 import virtual1 from "./img/projectsImg/virtual1.png";
 import virtual2 from "./img/projectsImg/virtual2.png";
 import virtual3 from "./img/projectsImg/virtual3.png";
+import unsplash1 from "./img/projectsImg/unsplash1.png";
+import unsplash2 from "./img/projectsImg/unsplash2.png";
+import unsplash3 from "./img/projectsImg/unsplash3.png";
 
 /* ============== Main ============== */
 export const mainGB = [
@@ -136,6 +139,18 @@ export const projectsGB = [
     website,
     photos: [{ photo: virtual1 }, { photo: virtual2 }, { photo: virtual3 }],
   },
+  {
+    id: 7,
+    title: "Unsplash images",
+    stack: "React + React query + CSS + API",
+    description:
+      "This website is a collection of photos from Unsplash where users can search and browse different images using keywords. The site allows you to quickly find photos by various criteria, add them to your own projects or use them for various creative purposes. It is a great resource for photographers, designers and anyone who needs high-quality images for their projects.",
+    githubLink: "https://github.com/Mykola-Dzoban/unsplash-images",
+    pageLink: "https://free-unsplash-images.netlify.app/",
+    github,
+    website,
+    photos: [{ photo: unsplash1 }, { photo: unsplash2 }, { photo: unsplash3 }],
+  },
 ];
 export const projectsUA = [
   {
@@ -216,6 +231,18 @@ export const projectsUA = [
     website,
     photos: [{ photo: virtual1 }, { photo: virtual2 }, { photo: virtual3 }],
   },
+  {
+    id: 7,
+    title: "Unsplash images",
+    stack: "React + React query + CSS + API",
+    description:
+      "Цей веб-сайт - це колекція фотографій з Unsplash, де користувачі можуть шукати та переглядати різні зображення, використовуючи ключові слова. Сайт надає можливість швидко знайти фотографії за різними критеріями, додати їх до власних проектів або використовувати для різних творчих цілей. Це відмінний ресурс для фотографів, дизайнерів та всіх, хто потребує якісні зображення для своїх проектів.",
+    githubLink: "https://github.com/Mykola-Dzoban/unsplash-images",
+    pageLink: "https://free-unsplash-images.netlify.app/",
+    github,
+    website,
+    photos: [{ photo: unsplash1 }, { photo: unsplash2 }, { photo: unsplash3 }],
+  },
 ];
 /* ============== Technologies ============== */
 export const technologies = [
@@ -237,25 +264,25 @@ export const contacts = [
   {
     id: 1,
     icon: github,
-    name:'GitHub',
+    name: "GitHub",
     link: "https://github.com/Mykola-Dzoban",
   },
   {
     id: 2,
     icon: telegram,
-    name:'Telegram',
+    name: "Telegram",
     link: "https://t.me/nikalaaay",
   },
   {
     id: 3,
     icon: twitter,
-    name:'Twitter',
+    name: "Twitter",
     link: "https://twitter.com/gushidomo",
   },
   {
     id: 4,
     icon: linkedin,
-    name:'LinkedIn',
+    name: "LinkedIn",
     link: "https://www.linkedin.com/in/mykola-dzoban-9007a0261/",
   },
 ];
