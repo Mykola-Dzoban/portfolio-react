@@ -12,7 +12,6 @@ const Project = () => {
   const { loading, projects } = useFetchProjects();
   const gbBtn = useSelector(gbSelector);
   const projectName = useParams().projectTitle;
-  // const projects = gbBtn ? projectsGB : projectsUA;
   const project = !loading && projects.find(
     (project) => project.title.toLowerCase() === projectName
   );
