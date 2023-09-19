@@ -29,7 +29,7 @@ const About = () => {
     return (
       <section className="contacts">
         <div className="contacts__wrapper">
-          <h2>Loading...</h2>
+          <div className="loading"></div>
         </div>
       </section>
     );
@@ -44,7 +44,7 @@ const About = () => {
     );
   }
 
-  const newDate = new Date(user.created_at);
+  const newDate = new Date(user?.created_at);
 
   return (
     <section className="about">
@@ -81,20 +81,20 @@ const About = () => {
           <img src={user.avatar_url} alt="Avatar" />
           <div className="user-data">
             <p className="github-name">
-              <strong>{user.name}</strong>
+              <strong>{user?.name}</strong>
             </p>
             <hr />
             <p className="github-location">
-              <strong>Location:</strong> {user.location}
+              <strong>Location:</strong> {user?.location}
             </p>
             <p className="github-date">
               <strong>Created:</strong> {newDate.toDateString()}
             </p>
             <p className="github-update">
-              <strong>Public repositories:</strong> {user.public_repos}
+              <strong>Public repositories:</strong> {user?.public_repos}
             </p>
             <hr />
-            <a target="_blank" rel="noreferrer" href={user.html_url}>
+            <a target="_blank" rel="noreferrer" href={user?.html_url}>
               {gbBtn ? "GitHub profile" : "GitHub профіль"}
             </a>
           </div>

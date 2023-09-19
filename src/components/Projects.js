@@ -2,23 +2,31 @@ import { useSelector } from "react-redux";
 import { gbSelector } from "../store/selector";
 import { Link } from "react-router-dom";
 
-import { projectsGB, projectsUA } from "../data";
+import useFetchProjects from "../store/fetchData";
 
 const Projects = () => {
+  const { loading, projects } = useFetchProjects();
   const gbBtn = useSelector(gbSelector);
 
-  const renderEngProjects = () => {
+  const renderProjects = () => {
     return (
       <>
-        {projectsGB.map((project) => {
-          const { id, title, description } = project;
+        {!loading && projects.map((project, index) => {
+          const {
+            title,
+            descriptionGb,
+            descriptionUa,
+          } = project;
           return (
-            <div key={id} className="project-text project-text2">
+            <div key={index} className="project-text project-text2">
               <h3>{title}</h3>
-              <p className="description">{description.substring(0, 200)}...</p>
-              <Link
-                className="details"
-                to={`/projects/${title.toLowerCase()}`}>
+              <p className="description">
+                {gbBtn
+                  ? descriptionGb.substring(0, 200)
+                  : descriptionUa.substring(0, 200)}
+                ...
+              </p>
+              <Link className="details" to={`/projects/${title.toLowerCase()}`}>
                 More details...
               </Link>
             </div>
@@ -28,33 +36,22 @@ const Projects = () => {
     );
   };
 
-  const renderUkrProjects = () => {
+  if (loading) {
     return (
-      <>
-        {projectsUA.map((project) => {
-          const { id, title, description } = project;
-          return (
-            <div key={id} className="project-text project-text2">
-              <h3>{title}</h3>
-              <p className="description">{description.substring(0, 200)}...</p>
-              <Link
-                className="details"
-                to={`/projects/${title.toLowerCase()}`}>
-                More details...
-              </Link>
-            </div>
-          );
-        })}
-      </>
+      <section className="contacts">
+        <div className="contacts__wrapper">
+          <div className="loading"></div>
+        </div>
+      </section>
     );
-  };
+  }
 
   return (
     <section>
       <div className="projects-section__wrapper">
         <h2>{gbBtn ? "Projects" : "Проєкти"}</h2>
         <div className="projects__wrapper" id="proj-wrapper">
-          {gbBtn ? renderEngProjects() : renderUkrProjects()}
+          {renderProjects()}
         </div>
       </div>
     </section>

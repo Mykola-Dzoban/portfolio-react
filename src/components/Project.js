@@ -1,25 +1,28 @@
 import { useParams } from "react-router";
 import { useSelector } from "react-redux";
 import { gbSelector } from "../store/selector";
+import github from "../img/github.svg";
+import website from "../img/website.svg";
 
-import { projectsGB, projectsUA } from "../data";
 import { useEffect, useState } from "react";
+import useFetchProjects from "../store/fetchData";
+
 
 const Project = () => {
+  const { loading, projects } = useFetchProjects();
   const gbBtn = useSelector(gbSelector);
   const projectName = useParams().projectTitle;
-  const projects = gbBtn ? projectsGB : projectsUA;
-  const project = projects.find(
+  // const projects = gbBtn ? projectsGB : projectsUA;
+  const project = !loading && projects.find(
     (project) => project.title.toLowerCase() === projectName
   );
   const {
     title,
     stack,
-    description,
+    descriptionGb,
+    descriptionUa,
     githubLink,
     pageLink,
-    github,
-    website,
     photos
   } = project;
 
@@ -27,13 +30,13 @@ const Project = () => {
 
   const prevSlide = () => {
     setCurSlide((oldSlide) => {
-      const result = (oldSlide - 1 + photos.length) % photos.length;
+      const result = (oldSlide - 1 + 3) % 3;
       return result;
     });
   };
   const nextSlide = () => {
     setCurSlide((oldSlide) => {
-      const result = (oldSlide + 1) % photos.length;
+      const result = (oldSlide + 1) % 3;
       return result;
     });
   };
@@ -47,12 +50,22 @@ const Project = () => {
     };
   }, [curSlide]);
 
+  if (loading) {
+    return (
+      <section className="contacts">
+        <div className="contacts__wrapper">
+          <div className="loading"></div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <div className="project">
       <div className="project-text">
         <h2>{title}</h2>
         <p className="tech-stack">{stack}</p>
-        <p className="description">{description}</p>
+        <p className="description">{gbBtn ? descriptionGb : descriptionUa}</p>
       </div>
       <div className="project-links">
         <a target="_blank" rel="noreferrer" href={githubLink}>
@@ -63,21 +76,22 @@ const Project = () => {
         </a>
       </div>
       <div className="slider-container">
-        {photos.map((photoImg, index) => {
-          const { photo } = photoImg;
-          return (
-            <article
-              className="slide"
-              style={{
-                transform: `translateX(${100 * (index - curSlide)}%)`,
-                opacity: index === curSlide ? 1 : 0,
-                visibility: index === curSlide ? "visible" : "hidden",
-              }}
-              key={index}>
-              <img src={photo} alt={title} className="slide-img" />
-            </article>
-          );
-        })}
+        {!loading &&
+          photos.map((photoImg, index) => {
+            
+            return (
+              <article
+                className="slide"
+                style={{
+                  transform: `translateX(${100 * (index - curSlide)}%)`,
+                  opacity: index === curSlide ? 1 : 0,
+                  visibility: index === curSlide ? "visible" : "hidden",
+                }}
+                key={index}>
+                <img src={photoImg} alt={title} className="slide-img" />
+              </article>
+            );
+          })}
       </div>
     </div>
   );

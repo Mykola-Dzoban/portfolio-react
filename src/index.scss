@@ -85,7 +85,7 @@ hr {
 
 /* Header */
 header {
-  background: #343a40;
+  background: #0d0c16;
   padding: 17px 0;
 }
 .header__wrapper {
@@ -300,6 +300,22 @@ header {
   opacity: 1;
 }
 
+@keyframes spinner {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.loading {
+    width: 6rem;
+    height: 6rem;
+    border: 5px solid #000000;
+    border-radius: 50%;
+    margin: 0 auto;
+    border-top-color: #ffffff;
+    animation: spinner .3s linear infinite
+}
+
 /* Work experience */
 .work__wrapper {
   min-height: 90vh;
@@ -341,7 +357,7 @@ header {
 
 /* Footer */
 footer {
-  background: #343a40;
+  background: #0d0c16;
 }
 .footer__wrapper {
   @include flex($direct: column);
